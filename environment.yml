@@ -1,0 +1,8 @@
+name: n0tus.com
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - flask=1.0.2
+  - frozen-flask=0.15
+
