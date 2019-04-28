@@ -1,10 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Cameron Fraser</title>
-</head>
-<body>
-    <div id="content">
+{% extends "base.html" %}
+{% block content %}
     <style>
         #canvas {
             position: absolute;
@@ -51,6 +46,4 @@
 
         draw();
     </script>
-</div>
-</body>
-</html>
+{% endblock %}
