@@ -1,26 +1,17 @@
 {% extends "base.html" %}
 {% block content %}
-    <style>
-        #canvas {
-            position: absolute;
-            top: 0;
-            left: 0;
-        }
-    </style>
     <canvas id="canvas"></canvas>
     <script>
         const elem = document.getElementById('canvas');
         const ctx = elem.getContext('2d');
 
         ctx.canvas.width  = window.innerWidth;
-        ctx.canvas.height = window.innerHeight;
+        ctx.canvas.height = window.innerHeight - 65;
         ctx.fillStyle = '#C0C0C0';
         ctx.lineWidth = 1;
         
         const deg_to_rad = Math.PI / 180.0;
         const depth = 13;
-
-
         
         const drawLine = (x1, y1, x2, y2, brightness) => {
             ctx.moveTo(x1, y1);
@@ -38,12 +29,15 @@
         };
 
         const draw = () => {
+            ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
             ctx.beginPath();
-            drawTree(window.innerWidth / 2, window.innerHeight - 10, -90, depth);
+            drawTree(window.innerWidth / 2, window.innerHeight - 60, -90, depth);
             ctx.closePath();
             ctx.stroke();
         };
 
         draw();
+
+        setInterval(draw, 5000);
     </script>
 {% endblock %}
