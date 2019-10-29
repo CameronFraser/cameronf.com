@@ -64,3 +64,8 @@ node_modules/
 # dotenv environment variables file
 .env
 .firebaserc
+
+static/js/*.html
+static/js/*.js.map
+
+.DS_Store

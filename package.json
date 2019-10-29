@@ -1,0 +1,29 @@
+{
+  "name": "cameronf.com",
+  "version": "1.0.0",
+  "description": "* conda activate cameronf.com * python app.py build * firebase deploy",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "firebase deploy",
+    "water-shader:dev": "canvas-sketch ./canvas/water_shader.js",
+    "water-shader:build": "canvas-sketch canvas/water_shader.js --build --dir static/js --js=water_shader.js && rm static/js/*.html && rm static/js/*.js.map"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CameronFraser/cameronf.com.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CameronFraser/cameronf.com/issues"
+  },
+  "homepage": "https://github.com/CameronFraser/cameronf.com#readme",
+  "devDependencies": {
+    "canvas-sketch": "^0.7.1",
+    "canvas-sketch-cli": "^1.11.7",
+    "canvas-sketch-util": "^1.10.0",
+    "firebase-tools": "^7.6.2",
+    "glsl-noise": "0.0.0",
+    "glslify": "^7.0.0"
+  }
+}
